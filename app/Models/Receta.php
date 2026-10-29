@@ -10,6 +10,15 @@ class Receta extends Model
     /** @use HasFactory<\Database\Factories\RecetaFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'categoria_id',
+        'user_id',
+        'titulo',
+        'descripcion',
+        'ingredientes',
+        'imagen'
+    ];
+
 
     public function categoria()
     {
