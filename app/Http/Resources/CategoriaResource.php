@@ -24,5 +24,5 @@ class CategoriaResource extends JsonResource
                 'recetas' => $this->recetas,
             ],
         ];
-    }
+    } 
 } 

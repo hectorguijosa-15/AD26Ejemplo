@@ -25,5 +25,5 @@ class EtiquetaResource extends JsonResource
                 'recetas' => $this->recetas
             ],
         ];
-    }
+    } 
 }

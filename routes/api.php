@@ -6,10 +6,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CategoriaController;
 use App\Http\Controllers\Api\RecetaController;
 Use App\Http\Controllers\Api\EtiquetaController;
+use App\Http\Controllers\Api\LoginController;
 
+Route::post('login', [LoginController::class, 'store']);
+
+Route::middleware('auth:sanctum')->group(function (){
 Route::apiResource('categorias', CategoriaController::class);
 Route::apiResource('recetas', RecetaController::class);
 Route::apiResource('etiquetas', EtiquetaController::class);
+});
 
 
 
